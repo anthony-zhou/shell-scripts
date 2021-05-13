@@ -1,0 +1,17 @@
+#!/bin/zsh
+
+if [ -z $1 ]
+then
+  echo "Please specify a port number. Usage: \"kill-port <port_number>\""
+  exit
+fi
+
+pid=$(lsof -t -i tcp:$1)
+
+if [ -z $pid ]
+then 
+  echo "No processes found."
+else
+  kill $pid
+  echo "Killed process running on port $1"
+fi
