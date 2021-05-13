@@ -1,4 +1,4 @@
-# shell-scripts
+# Shell Scripts
 
 Useful scripts to run from the terminal.
 
