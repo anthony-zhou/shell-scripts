@@ -1,0 +1,9 @@
+#!/bin/zsh
+
+# Source: https://stackoverflow.com/a/6127884/14979348
+
+# This script deletes all branches merged into the currently checked out branch.
+
+# To exclude other branches from deletion, add them to the regular expression next to `master` and `main`.
+
+git branch --merged | egrep -v "(^\*|master|main)" | xargs git branch -d
